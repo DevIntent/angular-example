@@ -14,7 +14,7 @@
   "scripts": {
     "build": "ng build --target=development --env=dev",
     "build-prod": "ng build --target=production --env=prod",
-    "build-prod-with-source-maps": "ng build --target=production --env=staging -sm",
+    "build-prod-with-source-maps": "ng build --target=production --env=prod -sm",
     "start": "ng serve --target=development --env=dev",
     "start-prod": "ng serve --target=production --env=prod",
     "deploy": "firebase deploy --project prod",
