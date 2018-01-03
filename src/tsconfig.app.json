@@ -1,0 +1,21 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "mapRoot": "./",
+    "module": "es2015",
+    "noEmitOnError": true,
+    "noImplicitAny": false,
+    "outDir": "../out-tsc/app",
+    "removeComments": true,
+    "types": [
+      "zone.js",
+      "google-maps",
+      "googlemaps"
+    ]
+  },
+  "exclude": [
+    "test.ts",
+    "**/*.spec.ts"
+  ]
+}

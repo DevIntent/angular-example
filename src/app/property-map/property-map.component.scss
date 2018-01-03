@@ -1,0 +1,22 @@
+@import '../shared/global-styles/imports/variables';
+@import '../shared/global-styles/imports/mixins';
+
+:host {
+  display: block;
+  height: 70vw;
+  position: relative;
+  width: 100%;
+
+  agm-map {
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  @include breakpoint($desktop) {
+    height: 350px;
+  }
+}

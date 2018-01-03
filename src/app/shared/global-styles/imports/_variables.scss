@@ -1,0 +1,97 @@
+@import 'theme';
+
+/*
+ * Sass variables
+ */
+
+/*
+* You can use these generic variables in your elements for easy theming.
+* For example, if all your elements use `$primary-text-color` as its main
+* color, then switching from a light to a dark theme is just a matter of
+* changing the value of `$primary-text-color` in your application.
+*/
+$primary-text-color: #212121;
+$primary-background-color: #ffffff;
+$secondary-text-color: #616161;
+$alt-background-color: #f5f5f5;
+$disabled-text-color: #9e9e9e;
+$divider-color: #e0e0e0;
+$error-color: #dd2c00;
+$success-msg-background-color: #E0F2F1;
+$error-msg-background-color: #FFF3E0;
+
+/*
+* Primary and accent colors.
+*/
+$primary-color: #00796b;
+$light-primary-color: #b2dfdb;
+$dark-primary-color: #004d40;
+
+$accent-color: #ff9100;
+$light-accent-color: #ffd180;
+$dark-accent-color: #ff6d00;
+
+/*
+ * Material Design Light background theme
+ */
+$light-theme-background-color: #ffffff;
+$light-theme-base-color: #000000;
+$light-theme-text-color: #212121;
+$light-theme-secondary-color: #737373;  /* for secondary text and icons */
+$light-theme-disabled-color: #9b9b9b;  /* disabled/hint text */
+$light-theme-divider-color: #dbdbdb;
+
+/*
+ * Material Design Dark background theme
+ */
+$dark-theme-background-color: #212121;
+$dark-theme-base-color: #ffffff;
+$dark-theme-text-color: #ffffff;
+$dark-theme-secondary-color: #bcbcbc;  /* for secondary text and icons */
+$dark-theme-disabled-color: #646464;  /* disabled/hint text */
+$dark-theme-divider-color: #3c3c3c;
+
+// Breakpoints
+$handset: 360px;
+$large-handset: 480px;
+$x-large-handset: 600px; // flex-layout sm
+$tablet: 640px; /* app drawer breakpoint */
+$large-tablet: 840px;
+$desktop: 960px; // flex-layout md
+$large-desktop: 1280px; // flex-layout lg
+$x-large-desktop: 1440px;
+$xx-large-desktop: 1920px; // flex-layout xl
+$ultra-hd-desktop: 2560px;
+
+// Fonts
+$roboto: Roboto, 'Helvetica Neue', sans-serif;
+$roboto-slab: 'Roboto Slab', serif;
+
+// Typography
+$base-font-family: $roboto;
+$heading-font-family: $roboto;
+
+// Font Sizes
+$base-font-size: 16px;
+
+// Line height
+$base-line-height: 1.3;
+$heading-line-height: 1;
+
+// Other Sizes
+//$base-border-radius: 3px;
+$base-spacing: 24px;
+$small-spacing: $base-spacing * 0.5;
+
+// Border
+$base-border: 1px solid $divider-color;
+
+// Colors
+$base-background-color: $primary-background-color;
+$secondary-background-color: $alt-background-color;
+$very-light-accent-color: rgba(255, 152, 0, 0.12);
+
+// Animations
+$transition-duration: 500ms;
+$transition-timing: ease;
+$transition-all: all $transition-duration $transition-timing;

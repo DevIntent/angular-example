@@ -1,0 +1,43 @@
+<app-global-styles></app-global-styles>
+
+<mat-sidenav-container>
+  <mat-sidenav #appDrawer mode="over" opened="false">
+    <div class="sidenav-toolbar">
+      <span></span>
+      <button mat-button class="self-end" id="logoutButton" *ngIf="usersService.isLoggedIn" (click)="logout()">
+        Logout
+      </button>
+    </div>
+
+    <mat-nav-list>
+      <mat-list-item (click)="navService.closeNav()" [routerLink]="['']" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{exact: true}">
+        <mat-icon>home</mat-icon>
+        Home
+      </mat-list-item>
+      <mat-list-item (click)="navService.closeNav()" [routerLink]="['/agents']"
+                    routerLinkActive="active">
+        <mat-icon>contact_mail</mat-icon>
+        Research Tool
+      </mat-list-item>
+      <mat-list-item (click)="openBlog()">
+        <mat-icon>chrome_reader_mode</mat-icon>
+        Blog
+      </mat-list-item>
+      <mat-list-item *ngIf="usersService.currentUser" (click)="navService.closeNav()"
+                    [routerLink]="['/profile/', usersService.currentUser.uid]" routerLinkActive="active">
+        <mat-icon>person</mat-icon>
+        Profile
+      </mat-list-item>
+      <mat-list-item (click)="sendFeedback()">
+        <mat-icon>feedback</mat-icon>
+        Submit Feedback
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <app-top-nav></app-top-nav>
+  <router-outlet></router-outlet>
+
+  <app-footer></app-footer>
+</mat-sidenav-container>

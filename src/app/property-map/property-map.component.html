@@ -1,0 +1,6 @@
+<agm-map #map [latitude]="location.coordinates[1]" [longitude]="location.coordinates[0]" [zoom]="18"
+         [scrollwheel]="false">
+  <agm-marker [latitude]="location.coordinates[1]" [longitude]="location.coordinates[0]"
+    [iconUrl]="'/assets/images/map-marker.png'">
+  </agm-marker>
+</agm-map>

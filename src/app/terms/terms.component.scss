@@ -1,0 +1,236 @@
+@import url('https://themes.googleusercontent.com/fonts/css?kit=fpjTOVmNbO4Lz34iLyptLUXza5VhXqVC6o75Eld_V98');
+@import '../shared/global-styles/imports/variables';
+@import '../shared/global-styles/imports/mixins';
+
+.container {
+  margin: 32px 4px;
+
+  @include breakpoint($tablet) {
+    margin: 32px auto;
+  }
+}
+i {
+  font-style: italic !important;
+}
+ol {
+  margin: 0;
+  padding: 0
+}
+table td, table th {
+  padding: 0
+}
+.c13 {
+  color: $primary-color;
+  font-weight: 400;
+  text-decoration: underline;
+  vertical-align: baseline;
+  font-size: 12pt;
+  font-family: "Calibri";
+  font-style: normal
+}
+.c17 {
+  font-size: 18pt;
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 1.0;
+  orphans: 2;
+  widows: 2;
+  text-align: center
+}
+.c10 {
+  padding-top: 14pt;
+  padding-bottom: 14pt;
+  line-height: 1.0;
+  orphans: 2;
+  widows: 2;
+  text-align: left
+}
+.c0 {
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 1.0;
+  orphans: 2;
+  widows: 2;
+  text-align: left
+}
+.c1 {
+  font-size: 10.5pt;
+  font-family: "Calibri";
+  color: $secondary-text-color;
+  font-weight: 400
+}
+.c7 {
+  color: $secondary-text-color;
+  font-weight: 400;
+  font-size: 16pt;
+  font-family: "Calibri"
+}
+.c5 {
+  color: $primary-text-color;
+  font-weight: 400;
+  font-size: 12pt;
+  font-family: "Calibri"
+}
+.c15 {
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 1.0;
+  text-align: left
+}
+.c16 {
+  color: $primary-text-color;
+  font-weight: 400;
+  font-size: 11pt;
+  font-family: "Arial"
+}
+.c14 {
+  background-color: $primary-background-color;
+  max-width: 468pt;
+  padding: 72pt 72pt 72pt 72pt
+}
+.c3 {
+  text-decoration: none;
+  vertical-align: baseline;
+  font-style: normal
+}
+.c8 {
+  border: 1px solid black;
+  margin: 5px
+}
+.c11 {
+  color: $secondary-text-color;
+  font-size: 16pt
+}
+.c6 {
+  color: $secondary-text-color;
+  font-size: 10.5pt
+}
+.c2 {
+  color: inherit;
+  text-decoration: inherit
+}
+.c9 {
+  color: $primary-color;
+  text-decoration: underline
+}
+.c12 {
+  font-size: 10.5pt
+}
+.c4 {
+  height: 12pt
+}
+.title {
+  padding-top: 24pt;
+  color: $primary-text-color;
+  font-weight: 700;
+  font-size: 36pt;
+  padding-bottom: 6pt;
+  font-family: "Calibri";
+  line-height: 1.0;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left
+}
+.subtitle {
+  padding-top: 18pt;
+  color: $light-theme-secondary-color;
+  font-size: 24pt;
+  padding-bottom: 4pt;
+  font-family: "Georgia";
+  line-height: 1.0;
+  page-break-after: avoid;
+  font-style: italic;
+  orphans: 2;
+  widows: 2;
+  text-align: left
+}
+li {
+  color: $primary-text-color;
+  font-size: 12pt;
+  font-family: "Calibri"
+}
+p {
+  margin: 0;
+  color: $primary-text-color;
+  font-size: 12pt;
+  font-family: "Calibri"
+}
+h1 {
+  padding-top: 24pt;
+  color: $primary-text-color;
+  font-weight: 700;
+  font-size: 24pt;
+  padding-bottom: 6pt;
+  font-family: "Calibri";
+  line-height: 1.0;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left
+}
+h2 {
+  padding-top: 18pt;
+  color: $primary-text-color;
+  font-weight: 700;
+  font-size: 18pt;
+  padding-bottom: 4pt;
+  font-family: "Calibri";
+  line-height: 1.0;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left
+}
+h3 {
+  padding-top: 14pt;
+  color: $primary-text-color;
+  font-weight: 700;
+  font-size: 14pt;
+  padding-bottom: 4pt;
+  font-family: "Calibri";
+  line-height: 1.0;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left
+}
+h4 {
+  padding-top: 12pt;
+  color: $primary-text-color;
+  font-weight: 700;
+  font-size: 12pt;
+  padding-bottom: 2pt;
+  font-family: "Calibri";
+  line-height: 1.0;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left
+}
+h5 {
+  padding-top: 11pt;
+  color: $primary-text-color;
+  font-weight: 700;
+  font-size: 11pt;
+  padding-bottom: 2pt;
+  font-family: "Calibri";
+  line-height: 1.0;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left
+}
+h6 {
+  padding-top: 10;
+  color: $primary-text-color;
+  font-weight: 700;
+  font-size: 10;
+  padding-bottom: 2pt;
+  font-family: "Calibri";
+  line-height: 1.0;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left
+}

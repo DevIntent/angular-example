@@ -1,0 +1,42 @@
+<main>
+  <section id="about">
+    <div class="container">
+      <div class="feature-image-wrapper" fxLayout="row" fxLayoutAlign="center end">
+        <mat-icon id="clock">access_time</mat-icon>
+        <mat-icon id="people" fxHide fxShow.gt-xs>wc</mat-icon>
+      </div>
+
+      <h1>Welcome</h1>
+
+      <div class="cols">
+        <div class="col">
+          <p>
+            Our consulting services are designed to assist your team with critical decisions around architecture, process, and leveraging
+            new technologies. We'll work with your team to review where you are now and how to move forward. The primary goal is to help
+            your business avoid wasted time and materials.
+          </p>
+          <div>
+            Let our extensive experience help you cut through the fog of indecision and accelerate your development efforts.
+          </div>
+        </div>
+
+        <div class="col">
+          <p>
+            The mobile web is the largest software platform in the world. Native mobile experiences are the most engaging. We can help you
+            break down your requirements and weigh the options available to your business.
+          </p>
+          <p>
+            We can explain when Progressive Web Apps are the best solution and when you should use cross-platform native,
+            cross-platform hybrid, or go full native on iOS and Android.
+          </p>
+        </div>
+      </div>
+
+      <div class="button-wrapper">
+        <a class="big" [routerLink]="['agents']" mat-raised-button color="accent">
+          Learn More
+        </a>
+      </div>
+    </div>
+  </section>
+</main>

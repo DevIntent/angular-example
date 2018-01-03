@@ -1,0 +1,76 @@
+@import '../../../shared/global-styles/imports/variables';
+@import '../../../shared/global-styles/imports/mixins';
+@import '../../../shared/global-styles/imports/material2/button';
+
+:host {
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+main {
+  section {
+
+    &.alt {
+      h1,
+      h2,
+      h3 {
+        color: $secondary-text-color;
+      }
+    }
+    .topInfoContainer {
+      padding: 0 0 $base-spacing;
+    }
+    .bottomInfoContainer {
+      padding: $base-spacing * 2 $base-spacing $base-spacing;
+    }
+    .previewTitle {
+      color: mat-color($app-primary, 800);
+      margin-bottom: 0;
+    }
+    .previewCard {
+      margin-top: 80px;
+      background-color: mat-color($app-primary, 50);
+
+      &.first {
+        margin-top: 48px;
+      }
+    }
+    img {
+      width: 320px;
+    }
+  }
+}
+.mat-raised-button {
+  width: 270px;
+  margin: 8px 0;
+}
+@include breakpoint($tablet) {
+  main {
+    padding: $base-spacing * 2 $base-spacing;
+    section {
+      padding: $base-spacing * 2 $base-spacing;
+
+      &.alt {
+        h1,
+        h2,
+        h3 {
+          color: $secondary-text-color;
+        }
+      }
+      .topInfoContainer {
+        margin: $base-spacing;
+        padding: 0;
+      }
+      .bottomInfoContainer {
+        padding: $base-spacing * 2 0 0;
+      }
+      img {
+        width: inherit;
+      }
+    }
+  }
+}

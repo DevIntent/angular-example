@@ -1,0 +1,306 @@
+@import '../shared/global-styles/imports/variables';
+@import '../shared/global-styles/imports/mixins';
+.container {
+  margin: 32px 4px;
+
+  @include breakpoint($tablet) {
+    margin: 32px auto;
+  }
+}
+.information-use {
+  margin: 32px 0;
+}
+.privacy-title {
+  margin-bottom: 16px;
+}
+i {
+  font-style: italic !important;
+}
+.lst-kix_ekaedyz9nc99-0 > li:before {
+  content: "\0025cf  "
+}
+.lst-kix_ekaedyz9nc99-1 > li:before {
+  content: "\0025cb  "
+}
+.lst-kix_ekaedyz9nc99-4 > li:before {
+  content: "\0025cb  "
+}
+.lst-kix_ekaedyz9nc99-2 > li:before {
+  content: "\0025a0  "
+}
+.lst-kix_ekaedyz9nc99-3 > li:before {
+  content: "\0025cf  "
+}
+.lst-kix_ekaedyz9nc99-8 > li:before {
+  content: "\0025a0  "
+}
+ul.lst-kix_ekaedyz9nc99-6 {
+  list-style-type: none
+}
+ul.lst-kix_ekaedyz9nc99-7 {
+  list-style-type: none
+}
+ul.lst-kix_ekaedyz9nc99-8 {
+  list-style-type: none
+}
+ul.lst-kix_ekaedyz9nc99-2 {
+  list-style-type: none
+}
+ul.lst-kix_ekaedyz9nc99-3 {
+  list-style-type: none
+}
+.lst-kix_ekaedyz9nc99-5 > li:before {
+  content: "\0025a0  "
+}
+ul.lst-kix_ekaedyz9nc99-4 {
+  list-style-type: none
+}
+ul.lst-kix_ekaedyz9nc99-5 {
+  list-style-type: none
+}
+.lst-kix_ekaedyz9nc99-6 > li:before {
+  content: "\0025cf  "
+}
+.lst-kix_ekaedyz9nc99-7 > li:before {
+  content: "\0025cb  "
+}
+ul.lst-kix_ekaedyz9nc99-0 {
+  list-style-type: none
+}
+ul.lst-kix_ekaedyz9nc99-1 {
+  list-style-type: none
+}
+ol {
+  margin: 0;
+  padding: 0
+}
+table td, table th {
+  padding: 0
+}
+.c1 {
+  margin-left: 36pt;
+  padding-top: 0pt;
+  padding-left: 0pt;
+  padding-bottom: 0pt;
+  line-height: 1.15;
+  orphans: 2;
+  widows: 2;
+  text-align: left
+}
+.c4 {
+  background-color: $primary-background-color;
+  color: $secondary-text-color;
+  font-weight: 400;
+  text-decoration: none;
+  vertical-align: baseline;
+  font-size: 16pt;
+  font-family: "Arial";
+  font-style: normal
+}
+.c0 {
+  background-color: $primary-background-color;
+  color: $secondary-text-color;
+  font-weight: 400;
+  text-decoration: none;
+  vertical-align: baseline;
+  font-size: 10.5pt;
+  font-family: "Arial";
+  font-style: normal
+}
+.c8 {
+  background-color: $primary-background-color;
+  color: $secondary-text-color;
+  text-decoration: none;
+  vertical-align: baseline;
+  font-size: 24pt;
+  font-family: "Arial";
+  font-style: normal
+}
+.c5 {
+  color: $secondary-text-color;
+  font-weight: 400;
+  text-decoration: none;
+  vertical-align: baseline;
+  font-size: 10.5pt;
+  font-family: "Arial";
+  font-style: normal
+}
+.c17 {
+  color: $primary-text-color;
+  font-weight: 400;
+  text-decoration: none;
+  vertical-align: baseline;
+  font-size: 11pt;
+  font-family: "Arial";
+  font-style: normal
+}
+.c2 {
+  padding-top: 0pt;
+  padding-bottom: 0pt;
+  line-height: 1.15;
+  orphans: 2;
+  widows: 2;
+  text-align: left
+}
+.c14 {
+  padding-top: 32pt;
+  padding-bottom: 32pt;
+  line-height: 1.15;
+  orphans: 2;
+  widows: 2;
+  text-align: left
+}
+.c9 {
+  padding-top: 0pt;
+  padding-bottom: 0pt;
+  line-height: 1.15;
+  orphans: 2;
+  widows: 2;
+  text-align: center
+}
+.c16 {
+  background-color: $primary-background-color;
+  font-size: 10.5pt;
+  color: $primary-color;
+  text-decoration: underline
+}
+.c6 {
+  background-color: $primary-background-color;
+  font-size: 16pt;
+  color: $secondary-text-color
+}
+.c12 {
+  background-color: $primary-background-color;
+  max-width: 468pt;
+  padding: 72pt 72pt 72pt 72pt
+}
+.c3 {
+  background-color: $primary-background-color;
+  font-size: 10.5pt;
+  color: $secondary-text-color
+}
+.c13 {
+  padding: 0;
+  margin: 0
+}
+.c15 {
+  color: inherit;
+  text-decoration: inherit
+}
+.c10 {
+  margin-left: 29pt
+}
+.c7 {
+  font-weight: 700
+}
+.c11 {
+  height: 11pt
+}
+.title {
+  padding-top: 0pt;
+  color: $primary-text-color;
+  font-size: 26pt;
+  padding-bottom: 3pt;
+  font-family: "Arial";
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left
+}
+.subtitle {
+  padding-top: 0pt;
+  color: $light-theme-secondary-color;
+  font-size: 15pt;
+  padding-bottom: 16pt;
+  font-family: "Arial";
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left
+}
+li {
+  color: $primary-text-color;
+  font-size: 11pt;
+  font-family: "Arial"
+}
+p {
+  margin: 0;
+  color: $primary-text-color;
+  font-size: 11pt;
+  font-family: "Arial"
+}
+h1 {
+  padding-top: 20pt;
+  color: $primary-text-color;
+  font-size: 20pt;
+  padding-bottom: 6pt;
+  font-family: "Arial";
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left
+}
+h2 {
+  padding-top: 18pt;
+  color: $primary-text-color;
+  font-size: 16pt;
+  padding-bottom: 6pt;
+  font-family: "Arial";
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left
+}
+h3 {
+  padding-top: 16pt;
+  color: #434343;
+  font-size: 14pt;
+  padding-bottom: 4pt;
+  font-family: "Arial";
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left
+}
+h4 {
+  padding-top: 14pt;
+  color: $light-theme-secondary-color;
+  font-size: 12pt;
+  padding-bottom: 4pt;
+  font-family: "Arial";
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left
+}
+h5 {
+  padding-top: 12pt;
+  color: $light-theme-secondary-color;
+  font-size: 11pt;
+  padding-bottom: 4pt;
+  font-family: "Arial";
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left
+}
+h6 {
+  padding-top: 12pt;
+  color: $light-theme-secondary-color;
+  font-size: 11pt;
+  padding-bottom: 4pt;
+  font-family: "Arial";
+  line-height: 1.15;
+  page-break-after: avoid;
+  font-style: italic;
+  orphans: 2;
+  widows: 2;
+  text-align: left
+}

@@ -1,0 +1,77 @@
+.container {
+  margin: 88px auto;
+}
+h1, h2, h3 {
+  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  font-weight: 300;
+}
+h1 {
+  margin: 1em 0;
+  padding: 0 0 0.25em;
+  border-bottom: 1px dotted #ccc;
+  text-align: center;
+  font-size: 3em;
+  line-height: 1.1em;
+}
+h2 {
+  margin: 1em 0 0.45em;
+  padding: 0;
+  font-size: 1.8em;
+}
+p {
+  margin: 0 0 0.5em;
+  line-height: 1.8em;
+}
+a {
+  text-decoration: none;
+}
+button {
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #009688;
+  letter-spacing: 0.01em;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  border-radius: 3px;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  outline: 0;
+  border: 0;
+  display: inline-block;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 6px;
+  margin: 6px 8px;
+  line-height: 36px;
+  min-height: 36px;
+  white-space: nowrap;
+  min-width: 88px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  font-style: inherit;
+  font-variant: inherit;
+  font-family: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-property: box-shadow, background-color;
+  transition-duration: 0.4s, 0.4s;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1), cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-delay: initial, initial;
+}
+button:hover {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #ffab40;
+}
+#container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+}

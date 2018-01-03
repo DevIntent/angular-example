@@ -1,0 +1,28 @@
+<mat-toolbar color="primary" class="topNav md-elevation-z2">
+  <button mat-icon-button id="menu" (click)="navService.openNav()" *ngIf="!(navService.backRoute)?.length"
+          aria-label="menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <button mat-icon-button id="back" (click)="navService.goToPreviousRoute()"
+          *ngIf="(navService.backRoute)?.length" aria-label="back">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+
+  <a *ngIf="!navService.title" (click)="openHome()" id="logo" aria-label="Home">
+    <h1>DevIntent Angular Example</h1>
+  </a>
+  <h3 *ngIf="navService.title">
+    {{ navService.title }}
+  </h3>
+
+  <div fxLayout="row" fxLayoutAlign="end center" fxFlex>
+    <button mat-button id="loginButton" *ngIf="!usersService.isLoggedIn" (click)="login()">Login</button>
+    <img id="profilePhoto" *ngIf="usersService.currentUser" src="{{ (usersService.currentUser)?.photoURL }}"
+         [matMenuTriggerFor]="userMenu">
+  </div>
+</mat-toolbar>
+
+<mat-menu #userMenu="matMenu" [overlapTrigger]="false">
+  <button mat-menu-item (click)="openProfile()">Profile</button>
+  <button mat-menu-item (click)="logout()">Logout</button>
+</mat-menu>

@@ -1,0 +1,49 @@
+<div class="footer" fxLayout="column" fxLayoutAlign="center center">
+  <img id="footerLogo" src="../../assets/images/Market_Amplified_logo_white.svg" alt="Market Amplified Logo">
+  <div class="section-container" fxLayout="row" fxLayoutWrap="wrap">
+    <div class="section links">
+      <h4>Links</h4>
+      <ul>
+        <li><a [routerLink]="['']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+        <li *ngIf="usersService.currentUser">
+          <a [routerLink]="['/profile/', usersService.currentUser.uid]" routerLinkActive="active">Profile</a>
+        </li>
+        <li><a [routerLink]="['/agents']" routerLinkActive="active">Research Tool</a></li>
+        <li><a [routerLink]="['/terms']" routerLinkActive="active">Terms</a></li>
+        <li>
+          <a href="https://blog.devintent.com" target="_blank" rel="noopener" (click)="onBlogClick()">
+            Blog <mat-icon class="launchIcon">launch</mat-icon>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="section social">
+      <h4>Social</h4>
+      <ul>
+        <li><a href="https://twitter.com/devintent" target="_blank" rel="noopener">Twitter</a></li>
+        <li><a href="https://www.facebook.com/devintent" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="https://www.linkedin.com/company/devintent-llc" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </div>
+    <div class="section contact">
+      <h4>Contact</h4>
+      <ul>
+        <li>
+          <a href="mailto:sales@devintent.com" rel="noopener">
+            <mat-icon>mail_outline</mat-icon>Sales
+          </a>
+        </li>
+        <li>
+          <a href="https://www.devintent.com" target="_blank" rel="noopener" (click)="onFeedbackClick()">
+            <mat-icon>feedback</mat-icon>Submit Feedback <mat-icon class="launchIcon">launch</mat-icon>
+          </a>
+        </li>
+        <li>1900 S. Harbor City Blvd, Suite #103<br>Melbourne, FL USA 32901</li>
+      </ul>
+    </div>
+  </div>
+  <div class="copyright-privacy" fxLayout="row" fxLayoutWrap="wrap">
+    <span>&copy; DevIntent 2018. All Rights Reserved.&nbsp;</span>
+    <span><a [routerLink]="['privacy']" routerLinkActive="active">Privacy Policy</a></span>
+  </div>
+</div>

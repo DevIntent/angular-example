@@ -1,0 +1,89 @@
+@import '../shared/global-styles/imports/variables';
+@import '../shared/global-styles/imports/mixins';
+@import '../shared/global-styles/imports/material2/button';
+@import '../shared/global-styles/imports/material2/card';
+
+main {
+  margin: 0 auto;
+  max-width: $desktop;
+  padding: $base-spacing 0;
+  width: 100%;
+
+  mat-progress-spinner {
+    margin: 120px auto;
+  }
+  label {
+    font-weight: 500;
+  }
+  #paidAccessIcon {
+    color: $primary-color;
+    vertical-align: middle;
+    margin-left: 8px;
+  }
+  #noPaidAccessIcon {
+    color: $accent-color;
+    vertical-align: middle;
+    margin-left: 8px;
+  }
+  #contactSales {
+    color: $primary-color;
+    margin-left: 8px;
+  }
+  mat-form-field {
+    max-width: 400px;
+    width: 100%;
+  }
+}
+.col-profile-img {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  margin-bottom: $base-spacing;
+}
+.profile-img {
+  background-color: $light-primary-color;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  height: 0;
+  margin-right: $small-spacing;
+  overflow: hidden;
+  padding-top: 80px;
+  width: 80px;
+
+  &+p {
+    margin: 0;
+  }
+}
+@include breakpoint($large-handset) {
+  $profile-col-secondary-width: 200px;
+  $profile-col-margin: $base-spacing * 2;
+
+  .col-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  .col-primary {
+    margin-left: $profile-col-margin;
+    width: calc(100% - #{$profile-col-secondary-width - $profile-col-margin});
+  }
+
+  .col-profile-img {
+    display: block;
+    margin: 0;
+    width: $profile-col-secondary-width;
+  }
+
+  .profile-img {
+    margin: 0;
+    padding-top: 100%;
+    width: 100%;
+
+    &+p {
+      margin-top: $small-spacing;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "hosting": {
+    "public": "dist",
+    "ignore": [
+      "**/.*"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/worker-basic.min.js",
+        "destination": "/ngsw-worker.js"
+      },
+      {
+        "source": "/ngsw-worker.js",
+        "destination": "/ngsw-worker.js"
+      }
+    ]
+  }
+}

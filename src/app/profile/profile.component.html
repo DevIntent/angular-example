@@ -1,0 +1,39 @@
+<main>
+  <mat-progress-spinner *ngIf="!userSnapshot" mode="indeterminate" color="primary"></mat-progress-spinner>
+  <mat-card class="full-bleed-mobile" *ngIf="userSnapshot">
+    <mat-card-title>Profile Information</mat-card-title>
+    <mat-card-content>
+      <form #profileForm="ngForm">
+        <div class="col-wrapper">
+          <div class="col-profile-img">
+            <div class="profile-img" [style.background-image]="'url(' + userSnapshot.photoURL + ')'"></div>
+          </div>
+
+          <div class="col-primary">
+            <div class="form-row">
+              <mat-form-field color="accent">
+                <input matInput #displayName placeholder="Name" name="displayName"
+                       [(ngModel)]="userSnapshot.displayName">
+              </mat-form-field>
+            </div>
+            <div class="form-row">
+              <mat-form-field color="accent">
+                <input matInput #email placeholder="Email" name="email" type="email"
+                       [(ngModel)]="userSnapshot.email">
+              </mat-form-field>
+            </div>
+            <div class="form-row buttons">
+              <button type="button" mat-button (click)="navService.back()" color="primary">
+                Cancel
+              </button>
+              <button mat-button (click)="saveUserInfo(userSnapshot)" type="submit" color="accent"
+                      [disabled]="profileForm.invalid || !profileForm.form.dirty">
+                Submit
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</main>

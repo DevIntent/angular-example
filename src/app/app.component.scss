@@ -1,0 +1,35 @@
+@import 'shared/global-styles/imports/variables';
+@import 'shared/global-styles/imports/material2/button';
+
+mat-sidenav {
+  width: 256px;
+}
+mat-sidenav-container {
+  background-color: $primary-background-color !important;
+}
+.sidenav-toolbar {
+  height: 64px;
+  background-color: $primary-color;
+  display: flex;
+  flex-direction: row;
+
+  span {
+    flex: 1 1 0%;
+  }
+}
+#logoutButton {
+  font-weight: 300;
+  color: $primary-background-color;
+  align-self: flex-end;
+}
+mat-list-item.active {
+  background-color: $light-primary-color;
+}
+mat-nav-list {
+  padding-top: 0;
+
+  mat-icon {
+    margin-right: 40px;
+    color: $primary-text-color;
+  }
+}

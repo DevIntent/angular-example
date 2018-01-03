@@ -1,0 +1,66 @@
+@import '../shared/global-styles/imports/variables';
+
+.footer {
+  background: $primary-color;
+  color: $dark-theme-text-color;
+
+  #footerLogo {
+    width: 270px;
+  }
+
+  h4 {
+    color: $dark-theme-text-color;
+    text-transform: uppercase;
+  }
+
+  .links,
+  .social,
+  .contact,
+  .copyright-privacy {
+    a {
+      text-decoration: none;
+      color: $dark-theme-text-color;
+    }
+    a:hover {
+      color: $accent-color;
+      text-decoration: underline;
+    }
+    a.active {
+      color: $accent-color;
+      opacity: 1;
+    }
+  }
+  ul {
+    padding: 0;
+
+    mat-icon {
+      font-size: 16px;
+      height: 16px;
+      position: relative;
+      top: 2px;
+      left: 0;
+    }
+    .launchIcon {
+      opacity: 0.7;
+    }
+  }
+  li {
+    list-style-type: none;
+    padding: 6px 0;
+
+    a {
+      padding: 6px 0;
+    }
+  }
+  .section {
+    margin: 24px 64px 0;
+
+    &.links {
+      margin-right: 16px;
+    }
+  }
+  .copyright-privacy {
+    font-size: 12px;
+    margin: 32px;
+  }
+}

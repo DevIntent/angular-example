@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en-US">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# business: http://ogp.me/ns/business#">
+  <title>DevIntent Angular Example</title>
+  <link rel="canonical" href="https://devintent-angular-example.firebaseio.com">
+  <base href="/">
+
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+
+  <meta name="description" content="This is an example Angular app built by DevIntent.">
+  <meta name="keywords" content="angular">
+  <meta name="author" content="Michael Prentice">
+
+  <link rel="shortcut icon" href="icons/favicon.ico">
+  <link rel="icon" type="image/png" href="icons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="icons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#000000">
+  <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#00796b">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes"> <!-- fallback for manifest.json -->
+  <meta name="application-name" content="Angular Example"> <!-- fallback for manifest.json -->
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Angular Example">
+
+  <!-- Homescreen icons -->
+  <link rel="shortcut icon" href="icons/icon-96x96.png">
+  <link rel="shortcut icon" sizes="32x32" href="icons/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="icons/icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="96x96" href="icons/icon-96x96.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="icons/icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+
+  <!-- Tile icon for Win8/Win10 -->
+  <meta name="msapplication-config" content="icons/browserconfig.xml">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:300,400,400i,500,700" rel="stylesheet" media="screen">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:300,400,400i,500,700" rel="stylesheet" media="print">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Facebook sharing meta data -->
+  <meta property="og:title" content="Angular Example">
+  <meta property="og:site_name" content="Angular Example">
+  <meta property="og:type" content="business.business">
+  <meta property="og:url" content="https://devintent-angular-example.firebaseio.com">
+  <meta property="og:description"
+        content="This is an example Angular app built by DevIntent.">
+  <meta property="og:image" content="https://devintent-angular-example.firebaseio.com/assets/images/site-preview.png">
+  <meta property="og:image:type" content="image/png"/>
+  <meta property="og:locale" content="en_US">
+  <meta property="fb:admins" content="Splaktar"/>
+  <meta property="fb:pages" content="devintent"/>
+  <meta property="fb:app_id" content="487835031547880"/>
+  <meta property="business:contact_data:street_address" content="1900 S. Harbor City Blvd, Suite #103" />
+  <meta property="business:contact_data:locality" content="Melbourne, FL" />
+  <meta property="business:contact_data:postal_code" content="32901" />
+  <meta property="business:contact_data:country_name" content="USA" />
+  <meta property="place:location:latitude" content="28" />
+  <meta property="place:location:longitude" content="-81" />
+
+  <!-- Twitter meta data -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@devintent">
+  <meta name="twitter:title" content="Angular Example">
+  <meta name="twitter:site" content="@devintent">
+  <meta name="twitter:description"
+        content="This is an example Angular app built by DevIntent.">
+  <meta name="twitter:image" content="https://devintent-angular-example.firebaseio.com/assets/images/site-preview.png">
+
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+  <link rel="dns-prefetch" href="https://fullstory.com">
+  <link rel="dns-prefetch" href="https://apis.google.com">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  </script>
+
+  <script>
+    window['_fs_debug'] = false;
+    window['_fs_host'] = 'fullstory.com';
+    window['_fs_org'] = 'XXXXX'; // TODO setup demo account
+    window['_fs_namespace'] = 'FS';
+  </script>
+
+</head>
+<body style="margin: 0; height: 100vh;">
+  <!-- Google Tag Manager -->
+  <!--<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PQ23LF"-->
+  <!--height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>-->
+  <!--<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':-->
+  <!--new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],-->
+  <!--j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=-->
+  <!--'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);-->
+  <!--})(window,document,'script','dataLayer','GTM-PQ23LF');</script>-->
+  <!-- End Google Tag Manager -->
+
+  <app-root>
+    <div id="appShell">
+      <div class="toolbarShell"></div>
+      <div class="container">
+        <div class="feature-image-wrapper">
+          <img src="assets/images/Market_Amplified_logo_teal.svg"/>
+        </div>
+      </div>
+      <span class="loadingMsg">Loading...</span>
+      <div id="spacer"></div>
+    </div>
+  </app-root>
+
+<!-- Google Search and G+ sharing meta data -->
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "Angular Example",
+  "description": "This is an example Angular app built by DevIntent.",
+  "url": "https://devintent-angular-example.firebaseio.com",
+  "logo": "https://devintent-angular-example.firebaseio.com/assets/images/Market_Amplified_icon_teal_800x800.png",
+  "image": "https://devintent-angular-example.firebaseio.com/assets/images/site-preview.png",
+  "sameAs": [
+    "https://twitter.com/devintent",
+    "https://plus.google.com/u/0/118168633908568959081",
+    "https://www.facebook.com/devintent",
+    "https://www.linkedin.com/company/devintent"
+  ]
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+@import '../variables';
+@import '../mixins';
+
+/*
+ * Material 2 card overrides
+ */
+
+$card-text-color: $primary-text-color;
+
+md-card,
+[md-card],
+.md-card {
+  @include first-last-no-margin;
+  border-radius: 0;
+  color: $card-text-color;
+  font-weight: 300;
+  margin: $base-spacing 0;
+  width: 100%;
+
+  h1 {
+    color: $card-text-color;
+    font-size: $base-font-size * 1.6;
+    border-bottom: 2px solid $divider-color;
+    padding-bottom: $small-spacing * 0.5;
+  }
+
+  h4 {
+    color: $card-text-color;
+  }
+
+  h5 {
+    color: $card-text-color;
+    margin-top: -($base-spacing * 0.75);
+  }
+
+  table {
+    td {
+      color: $card-text-color;
+    }
+  }
+
+  md-card-actions {
+    border-top: 1px solid $divider-color;
+  }
+
+  @include breakpoint-max($desktop) {
+    &.full-bleed-mobile {
+      &,
+      &:hover {
+        box-shadow: none;
+      }
+
+      md-card-actions {
+        border: none;
+        margin-top: $base-spacing;
+      }
+    }
+  }
+}

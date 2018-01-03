@@ -1,0 +1,142 @@
+@import '../shared/global-styles/imports/variables';
+@import '../shared/global-styles/imports/mixins';
+@import '../shared/global-styles/imports/material2/button';
+
+.mat-toolbar.topNav {
+  #menu {
+    margin-left: -8px;
+
+    @include breakpoint($handset) {
+      margin-left: 0;
+      margin-right: 8px;
+    }
+  }
+  #logo {
+    display: flex;
+    cursor: pointer;
+
+    h1 {
+      font-weight: 300;
+      font-size: 24px;
+      color: $primary-background-color;
+    }
+  }
+  h3 {
+    padding-top: 4px;
+    font-weight: 300;
+    font-size: 16px;
+    color: $primary-background-color;
+  }
+  #back {
+    margin-right: 16px;
+  }
+  #loginButton {
+    font-weight: 300;
+    width: 66px;
+    min-width: 66px;
+    color: $primary-background-color;
+  }
+  #logoutButton {
+    font-weight: 300;
+    width: 88px;
+    min-width: 66px;
+    display: none;
+    color: $primary-background-color;
+  }
+  #profilePhoto {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  #addressSearch {
+    width: auto;
+
+    .mat-form-field-placeholder {
+      color: rgba(255, 255, 255, 0.54);
+      font-size: 16px;
+      margin-top: 8px;
+    }
+    .mat-form-field-underline {
+      background-color: rgba(255, 255, 255, 0.54);
+    }
+    .mat-form-field-ripple {
+      background-color: rgba(255, 255, 255, 0.54);
+    }
+    input {
+      font-size: 16px;
+      opacity: 0.54;
+
+      &:focus {
+        opacity: 1;
+      }
+    }
+    .mat-form-field-infix {
+      padding-bottom: 4px;
+    }
+  }
+  form {
+    align-self: center;
+    justify-content: flex-end;
+  }
+
+  @include breakpoint($x-large-handset) {
+    #addressSearch {
+      max-width: 70%;
+    }
+    #back {
+      margin-right: 32px;
+    }
+    #loginButton {
+      width: 88px;
+      min-width: 66px;
+    }
+    #logoutButton {
+      display: inherit;
+    }
+    #profilePhoto {
+      margin-right: 8px;
+    }
+  }
+
+  @include breakpoint($desktop) {
+    #addressSearch {
+      max-width: 50%;
+    }
+    #loginButton {
+      margin-top: 0;
+    }
+    #logoutButton {
+      margin-top: 0;
+    }
+    #profilePhoto {
+      margin-top: 0;
+    }
+    #back {
+      padding-top: 0;
+    }
+  }
+  @include breakpoint($xx-large-desktop) {
+    #addressSearch {
+      max-width: 800px;
+    }
+  }
+}
+.address-autocomplete {
+  width: 75vw;
+}
+@include breakpoint($x-large-handset) {
+  .address-autocomplete {
+    width: 360px;
+  }
+}
+@include breakpoint($large-tablet) {
+  .address-autocomplete {
+    width: 500px;
+  }
+}
+@include breakpoint($large-desktop) {
+  .address-autocomplete {
+    width: auto;
+  }
+}

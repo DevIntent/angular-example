@@ -1,0 +1,58 @@
+@import '../variables';
+
+/*
+ * Material 2 button overrides
+ */
+.mat-button {
+  text-transform: uppercase;
+  transition: $transition-all;
+
+  .material-icons {
+    float: left;
+    font-size: 1.1em;
+    line-height: 1em;
+    margin: 0.7em 0.2em 0 -0.47em;
+  }
+
+  &:hover.mat-accent {
+    &::after {
+      background-color: $light-accent-color;
+    }
+  }
+
+  &:hover.mat-primary {
+    &::after {
+      background-color: $light-primary-color;
+    }
+  }
+}
+
+.mat-raised-button {
+  text-transform: uppercase;
+  transition: $transition-all;
+  color: $primary-background-color !important;
+
+  .material-icons {
+    float: left;
+    font-size: 1.1em;
+    line-height: 1em;
+    margin: 0.7em 0.2em 0 -0.47em;
+  }
+
+  &:hover.mat-accent,
+  &:focus.mat-accent {
+    background-color: $dark-accent-color;
+  }
+
+  &:hover.mat-primary,
+  &:focus.mat-primary {
+    background-color: $dark-primary-color;
+  }
+
+  &.big {
+    font-size: $base-font-size * 1.5;
+    font-weight: 400;
+    padding: $base-spacing * 0.75 $base-spacing;
+    line-height: 1em;
+  }
+}
