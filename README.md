@@ -10,7 +10,7 @@ Angular bug reports.
 - Note the settings in [.editorconfig](.editorconfig) and enable EditorConfig for your Editor or IDE.
 
 ## Required tools
-* [Node.js](https://nodejs.org/download/) 6+ w/ NPM 3+
+* [Node.js](https://nodejs.org/download/) LTS w/ NPM 5+
 * Firebase CLI - `npm install -g firebase-tools`
 
 ### Step 1) Get Your Local Environment setup
