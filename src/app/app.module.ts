@@ -11,6 +11,7 @@ import 'hammerjs';
 import {
   MatAutocompleteModule, MatMenuModule, MatSidenavModule, MatSnackBarModule, MatToolbarModule
 } from '@angular/material';
+import './rxjs.extensions';
 
 import {AppRoutingModule} from './app-routing.module';
 import {SharedModule} from './shared';

@@ -5,7 +5,6 @@ import {environment} from '../environments/environment';
 import {NavService} from './nav.service';
 import {GoogleAnalyticsService} from './google-analytics.service';
 import {isPlatformBrowser} from '@angular/common';
-import {filter} from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -41,10 +40,7 @@ export class AppComponent implements OnInit, AfterViewInit {
       };
 
       // scrollTop on newly visited pages
-      this.router.events
-      .pipe(
-        filter(event => event instanceof NavigationEnd)
-      )
+      this.router.events.filter(event => event instanceof NavigationEnd)
       .subscribe(() => {
         if (this.firstUseOfCurrentRoute) {
           const scrollingElement = document.scrollingElement || document.documentElement;
