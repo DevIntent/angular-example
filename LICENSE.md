@@ -22,4 +22,5 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ## Assets, Icons, Branding
-All Assets, Icons, and Branding related to Market Amplified or DevIntent are not available (UNLICENSED) for reproduction or distribution.
+All Assets, Icons, and Branding related to Market Amplified or DevIntent are not available (UNLICENSED)
+for reproduction or distribution.
