@@ -2,7 +2,6 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {UsersService} from '../users.service';
 import {NavService} from '../nav.service';
 import {Router} from '@angular/router';
-import {ObservableMedia} from '@angular/flex-layout';
 
 @Component({
   selector: 'app-top-nav',
@@ -14,8 +13,7 @@ export class TopNavComponent implements OnInit {
 
   constructor(public usersService: UsersService,
               private router: Router,
-              public navService: NavService,
-              public mediaService: ObservableMedia) {}
+              public navService: NavService) {}
 
   ngOnInit() {}
 
