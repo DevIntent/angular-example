@@ -19,7 +19,6 @@
       "resources": {
         "files": [
           "/favicon.ico",
-          "/404.html",
           "/manifest.json",
           "/index.html",
           "/robots.txt",

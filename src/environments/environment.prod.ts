@@ -3,7 +3,7 @@ export const environment = {
   production: false,
   firebaseConfig: {
     apiKey: 'AIzaSyCG5P0ZrbWcC212QZsEebyyGwj2KRgs700',
-    authDomain: 'devintent-angular-example.firebaseapp.com"',
+    authDomain: 'devintent-angular-example.firebaseapp.com',
     databaseURL: 'https://devintent-angular-example.firebaseio.com',
     projectId: 'devintent-angular-example',
     storageBucket: 'devintent-angular-example.appspot.com',
