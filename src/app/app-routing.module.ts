@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {Routes, RouterModule} from '@angular/router';
+import {Routes, RouterModule, PreloadAllModules} from '@angular/router';
 import {LandingComponent} from './landing/landing.component';
 import {ProfileComponent} from './profile/profile.component';
 import {PrivacyComponent} from './privacy/privacy.component';
@@ -17,7 +17,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {useHash: false})],
+  imports: [RouterModule.forRoot(routes, {useHash: false, preloadingStrategy: PreloadAllModules })],
   exports: [RouterModule],
   providers: []
 })
