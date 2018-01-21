@@ -9,11 +9,12 @@ import {AngularFireAuthModule} from 'angularfire2/auth';
 
 import 'hammerjs';
 import {
-  MatAutocompleteModule, MatMenuModule, MatSidenavModule, MatSnackBarModule, MatToolbarModule
+  MatAutocompleteModule, MatButtonModule, MatCardModule, MatChipsModule, MatDialogModule, MatIconModule, MatInputModule,
+  MatListModule, MatMenuModule, MatProgressSpinnerModule, MatRippleModule, MatSidenavModule, MatSnackBarModule,
+  MatToolbarModule
 } from '@angular/material';
 
 import {AppRoutingModule} from './app-routing.module';
-import {SharedModule} from './shared';
 import {NavService} from './nav.service';
 import {UsersService} from './users.service';
 import {GoogleAnalyticsService} from './google-analytics.service';
@@ -31,6 +32,10 @@ import {TermsComponent} from './terms/terms.component';
 import {PrivacyComponent} from './privacy/privacy.component';
 import {GlobalStylesComponent} from './shared/global-styles';
 import {ApiService} from './api.service';
+import {CodeConfirmationDialog} from './code-confirmation-dialog/code-confirmation.dialog';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {FlexLayoutModule} from '@angular/flex-layout';
+import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -41,13 +46,16 @@ import {ApiService} from './api.service';
     FooterComponent,
     TermsComponent,
     PrivacyComponent,
-    GlobalStylesComponent
+    GlobalStylesComponent,
+    PageNotFoundComponent,
+    CodeConfirmationDialog
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
     AngularFireAuthModule,
     AngularFireDatabaseModule,
     AngularFireModule.initializeApp(environment.firebaseConfig, environment.firebaseConfig.projectId),
@@ -56,8 +64,18 @@ import {ApiService} from './api.service';
     MatSnackBarModule,
     MatAutocompleteModule,
     MatMenuModule,
-    ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production}),
-    SharedModule
+    MatChipsModule,
+    MatDialogModule,
+    MatInputModule,
+    MatButtonModule,
+    MatIconModule,
+    MatListModule,
+    MatCardModule,
+    MatProgressSpinnerModule,
+    MatRippleModule,
+    FlexLayoutModule,
+    AppRoutingModule,
+    ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production})
   ],
   providers: [
     ApiService,
@@ -65,6 +83,9 @@ import {ApiService} from './api.service';
     UsersService,
     GoogleAnalyticsService,
     FullStoryService
+  ],
+  entryComponents: [
+    CodeConfirmationDialog
   ],
   bootstrap: [AppComponent]
 })

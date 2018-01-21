@@ -5,6 +5,9 @@
         <h3>
           This is some placeholder text.
         </h3>
+        <div>
+          <button mat-raised-button (click)="onOpenDialog()" color="accent">Open Dialog</button>
+        </div>
       </div>
       <app-property-map [location]="{type: 'geoJSON', coordinates: [-80.603443, 28.079144]}"></app-property-map>
     </div>

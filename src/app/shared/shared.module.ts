@@ -1,7 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {PageNotFoundComponent} from '../page-not-found/page-not-found.component';
 import {RouterModule} from '@angular/router';
 import {
   MatButtonModule, MatCardModule, MatCheckboxModule, MatIconModule, MatInputModule, MatListModule, MatOptionModule, MatPaginatorModule,
@@ -29,15 +28,12 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     MatCheckboxModule,
     MatPaginatorModule
   ],
-  declarations: [
-    PageNotFoundComponent
-  ],
+  declarations: [],
   exports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
     FlexLayoutModule,
-    PageNotFoundComponent,
     MatCardModule,
     MatInputModule,
     MatListModule,

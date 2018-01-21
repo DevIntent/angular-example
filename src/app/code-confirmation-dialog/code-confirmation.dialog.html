@@ -1,0 +1,15 @@
+<h2 mat-dialog-title>Enter SMS Code</h2>
+<mat-dialog-content>
+  <form [formGroup]="form">
+    <p>
+      We have sent a code to {{data.phoneNumber}}, please enter the code here:
+    </p>
+    <mat-form-field>
+      <input matInput id="confirmationCode" formControlName="confirmationCode" type="text" autocomplete="off"
+             placeholder="Confirmation Code" cdkFocusInitial (keyup.enter)="close()">
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button (click)="close()" color="primary" type="button">Submit</button>
+</mat-dialog-actions>

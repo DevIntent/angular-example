@@ -9,6 +9,8 @@ import {FullStoryService} from './fullstory.service';
 import {User} from './models/user';
 import {BehaviorSubject} from 'rxjs/BehaviorSubject';
 import {Observable} from 'rxjs/Observable';
+import {CodeConfirmationDialog} from './code-confirmation-dialog/code-confirmation.dialog';
+import {MatDialog} from '@angular/material';
 
 @Injectable()
 export class UsersService implements CanActivate {
@@ -25,6 +27,7 @@ export class UsersService implements CanActivate {
   constructor(public db: AngularFireDatabase,
               private fbAuth: AngularFireAuth,
               private gaService: GoogleAnalyticsService,
+              public dialog: MatDialog,
               private fullStoryService: FullStoryService) {
     this.userBehaviorSubject = new BehaviorSubject(null);
     this.handleRedirect();
@@ -97,6 +100,17 @@ export class UsersService implements CanActivate {
     .catch((signInError) => {
       console.error(`signInWithCredential failed: ${JSON.stringify(signInError)}`);
       this.gaService.sendEvent('accounts', 'signInWithCredential_failure');
+    });
+  }
+
+  openConfirmationDialog() {
+    const phoneNumber = '+13215551234';
+    const dialogRef = this.dialog.open(CodeConfirmationDialog, {
+      data: {phoneNumber: phoneNumber}
+    });
+
+    dialogRef.afterClosed().subscribe((code: string) => {
+      console.log(`Confirmation Code: ${code}`);
     });
   }
 

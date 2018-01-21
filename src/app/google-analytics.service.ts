@@ -7,23 +7,31 @@ declare let ga: any;
 export class GoogleAnalyticsService {
 
   constructor() {
-    ga('create', environment.googleAnalyticsTrackingId, 'auto');
-    ga('require', 'linkid');
+    if (environment.production) {
+      ga('create', environment.googleAnalyticsTrackingId, 'auto');
+      ga('require', 'linkid');
+    }
   }
 
   sendPageview(url: string) {
-    if (url) {
-      ga('send', 'pageview', url);
-    } else {
-      ga('send', 'pageview');
+    if (environment.production) {
+      if (url) {
+        ga('send', 'pageview', url);
+      } else {
+        ga('send', 'pageview');
+      }
     }
   }
 
   setUserId(userId: string) {
-    ga('set', 'userId', userId); // Set the user ID using signed-in user_id.
+    if (environment.production) {
+      ga('set', 'userId', userId); // Set the user ID using signed-in user_id.
+    }
   }
 
   sendEvent(category: string, action: string, label?: string, value?: number) {
-    ga('send', 'event', category, action, label, value);
+    if (environment.production) {
+      ga('send', 'event', category, action, label, value);
+    }
   }
 }

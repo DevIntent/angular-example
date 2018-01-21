@@ -26,4 +26,8 @@ export class FreeComponent implements OnInit {
     )
     .subscribe(data => this.data = data);
   }
+
+  onOpenDialog() {
+    this.usersService.openConfirmationDialog();
+  }
 }
