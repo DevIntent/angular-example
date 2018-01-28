@@ -13,8 +13,16 @@ import {filter} from 'rxjs/operators';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent implements OnInit, AfterViewInit {
+  private static serviceWorkerResolve: Function;
+
   @ViewChild('appDrawer') appDrawer: ElementRef;
   private firstUseOfCurrentRoute: boolean = true;
+
+  static getServiceWorkerInitFactory() {
+    return new Promise<any>((resolve, reject) => {
+      AppComponent.serviceWorkerResolve = resolve;
+    });
+  }
 
   constructor(public usersService: UsersService,
               private router: Router,
@@ -26,7 +34,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     appRef.isStable.subscribe((status: boolean) => {
       console.log(`The application is stable? ${status}`);
     });
-    if (environment.production) {
+    // if (environment.production) {
       router.events.subscribe(
         (event: Event) => {
           if (event instanceof NavigationEnd) {
@@ -34,7 +42,7 @@ export class AppComponent implements OnInit, AfterViewInit {
           }
         }
       );
-    }
+    // }
   }
 
   ngOnInit() {
@@ -62,7 +70,11 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     this.navService.appDrawer = this.appDrawer;
+    if (AppComponent.serviceWorkerResolve) {
+      AppComponent.serviceWorkerResolve();
+    }
   }
+
 
   logout() {
     this.navService.closeNav();

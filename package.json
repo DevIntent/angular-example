@@ -15,6 +15,7 @@
     "build": "ng build --target=development --env=dev",
     "build-prod": "ng build --target=production --env=prod",
     "build-prod-with-source-maps": "ng build --target=production --env=prod -sm",
+    "ngsw-config": "ngsw-config dist src/ngsw-config.json",
     "start": "ng serve --target=development --env=dev",
     "start-sw": "http-server dist/ -p 4200 -o",
     "start-prod": "ng serve --target=production --env=prod",
