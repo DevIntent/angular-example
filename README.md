@@ -13,7 +13,7 @@ Angular bug reports.
 * [Node.js](https://nodejs.org/download/) LTS w/ NPM 5+
 * Firebase CLI - `npm install -g firebase-tools`
 
-### Step 1) Get Your Local Environment setup
+### Get Your Local Environment setup
 
 * `git clone <repo>`
 * `cd angular-example`
@@ -21,8 +21,16 @@ Angular bug reports.
 * `npm start` will start a server locally
 * `npm test` to run the tests
 
-### Step 2) Deploy The App to Production (Admins only)
+### Deploy The App to Production (Admins only)
 
 * Generate minimized production build - `npm run build-prod`
 * `firebase login`
 * `npm run deploy-prod`
+
+### Test Service Worker
+
+* Generate minimized production build - `npm run build-prod`
+* Start up a http-server to test the Service Worker - `npm run start-sw`
+* Check in Chrome DevTools
+  * Application Tab -> Service Workers
+  * You should see a Service Worker registered under 127.0.0.1

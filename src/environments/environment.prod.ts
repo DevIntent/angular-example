@@ -1,6 +1,6 @@
 // For deployment to production only.
 export const environment = {
-  production: false,
+  production: true,
   firebaseConfig: {
     apiKey: 'AIzaSyCG5P0ZrbWcC212QZsEebyyGwj2KRgs700',
     authDomain: 'devintent-angular-example.firebaseapp.com',
