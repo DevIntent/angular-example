@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ElementRef, Inject, OnInit, PLATFORM_ID, Renderer2, ViewChild} from '@angular/core';
+import {AfterViewInit, ApplicationRef, Component, ElementRef, Inject, OnInit, PLATFORM_ID, Renderer2, ViewChild} from '@angular/core';
 import {Event, NavigationEnd, Router} from '@angular/router';
 import {UsersService} from './users.service';
 import {environment} from '../environments/environment';
@@ -21,7 +21,11 @@ export class AppComponent implements OnInit, AfterViewInit {
               public navService: NavService,
               private gaService: GoogleAnalyticsService,
               private renderer: Renderer2,
-              @Inject(PLATFORM_ID) private platformId: Object) {
+              @Inject(PLATFORM_ID) private platformId: Object,
+              appRef: ApplicationRef) {
+    appRef.isStable.subscribe((status: boolean) => {
+      console.log(`The application is stable? ${status}`);
+    });
     if (environment.production) {
       router.events.subscribe(
         (event: Event) => {
