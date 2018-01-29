@@ -75,8 +75,8 @@ import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
     MatRippleModule,
     FlexLayoutModule,
     AppRoutingModule,
-    ServiceWorkerModule.register('/ngsw-worker.js', {enabled: true,
-       toInitFactory: AppComponent.getServiceWorkerInitFactory})
+    ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production,
+       registrationStrategy: environment.serviceWorkerStrategy})
   ],
   providers: [
     ApiService,

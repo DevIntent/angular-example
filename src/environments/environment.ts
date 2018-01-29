@@ -10,5 +10,6 @@ export const environment = {
     messagingSenderId: '1003263481418'
   },
   googleAnalyticsTrackingId: '',
-  mapsApiKey: 'AIzaSyCG5P0ZrbWcC212QZsEebyyGwj2KRgs700'
+  mapsApiKey: 'AIzaSyCG5P0ZrbWcC212QZsEebyyGwj2KRgs700',
+  serviceWorkerStrategy: 'registerImmediately'
 };

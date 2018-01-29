@@ -1,4 +1,14 @@
 // For deployment to production only.
+import {Observable} from 'rxjs/Observable';
+
+export function getServiceWorkerObservable() {
+  return new Observable(observer => {
+    setTimeout(() => {
+      observer.next();
+    }, 10000);
+  });
+}
+
 export const environment = {
   production: true,
   firebaseConfig: {
@@ -10,5 +20,9 @@ export const environment = {
     messagingSenderId: '1003263481418'
   },
   googleAnalyticsTrackingId: '',
-  mapsApiKey: 'AIzaSyCG5P0ZrbWcC212QZsEebyyGwj2KRgs700'
+  mapsApiKey: 'AIzaSyCG5P0ZrbWcC212QZsEebyyGwj2KRgs700',
+  serviceWorkerStrategy: 'registerDelay:5000'
+  // serviceWorkerStrategy: 'registerImmediately'
+  // serviceWorkerStrategy: 'registerWhenStable'
+  // serviceWorkerStrategy: getServiceWorkerObservable
 };
