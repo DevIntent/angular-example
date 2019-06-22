@@ -1,4 +1,4 @@
-import {AfterViewInit, ApplicationRef, Component, ElementRef, Inject, OnInit, PLATFORM_ID, Renderer2, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, Inject, OnInit, PLATFORM_ID, Renderer2, ViewChild} from '@angular/core';
 import {Event, NavigationEnd, Router} from '@angular/router';
 import {UsersService} from './users.service';
 import {environment} from '../environments/environment';
@@ -21,11 +21,7 @@ export class AppComponent implements OnInit, AfterViewInit {
               public navService: NavService,
               private gaService: GoogleAnalyticsService,
               private renderer: Renderer2,
-              @Inject(PLATFORM_ID) private platformId: Object,
-              appRef: ApplicationRef) {
-    appRef.isStable.subscribe((status: boolean) => {
-      console.log(`The application is stable? ${status}`);
-    });
+              @Inject(PLATFORM_ID) private platformId: Object) {
     if (environment.production) {
       router.events.subscribe(
         (event: Event) => {
@@ -40,7 +36,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
       // Don't scrollTop on pages that have previously been visited
-      window.onpopstate = (event: PopStateEvent) => {
+      window.onpopstate = () => {
         this.firstUseOfCurrentRoute = false;
       };
 
