@@ -1,6 +1,6 @@
 {
   "name": "@devintent/angular-example",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "UNLICENSED",
   "repository": {
     "type": "git",
@@ -19,7 +19,7 @@
     "start:sw": "http-server dist/ -p 4200 -o",
     "start:prod": "ng serve --prod",
     "deploy": "firebase deploy --project prod",
-    "lint": "ng lint --type-check",
+    "lint": "ng lint",
     "ng": "ng",
     "smex": "source-map-explorer",
     "stylelint": "stylelint 'src/**/*.scss' --config stylelint-config.json --syntax scss",

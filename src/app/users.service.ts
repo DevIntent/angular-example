@@ -2,7 +2,6 @@ import {Injectable} from '@angular/core';
 import {Subscription} from 'rxjs/Subscription';
 import {AngularFireDatabase, AngularFireObject} from '@angular/fire/database';
 import {AngularFireAuth} from '@angular/fire/auth';
-import * as firebase from 'firebase/app';
 import {ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot} from '@angular/router';
 import {GoogleAnalyticsService} from './google-analytics.service';
 import {FullStoryService} from './fullstory.service';
@@ -11,16 +10,17 @@ import {BehaviorSubject} from 'rxjs/BehaviorSubject';
 import {Observable} from 'rxjs/Observable';
 import {CodeConfirmationDialog} from './code-confirmation-dialog/code-confirmation.dialog';
 import {MatDialog} from '@angular/material/dialog';
+import {auth, User as FirebaseUser} from 'firebase/app';
 
 @Injectable()
 export class UsersService implements CanActivate {
   private adminSubscription: Subscription;
   private userSubscription: Subscription;
-  public authState: firebase.User;
+  public authState: FirebaseUser;
   public isLoggedIn: boolean = false;
   public isAdmin: boolean = false;
   public currentUser: User;
-  private userBehaviorSubject: BehaviorSubject<User>;
+  private readonly userBehaviorSubject: BehaviorSubject<User>;
   public firebaseUserObservable: Observable<User>;
   public firebaseUser: AngularFireObject<User>;
 
@@ -32,7 +32,7 @@ export class UsersService implements CanActivate {
     this.userBehaviorSubject = new BehaviorSubject(null);
     this.handleRedirect();
 
-    this.fbAuth.authState.subscribe((authState: firebase.User) => {
+    this.fbAuth.authState.subscribe((authState: FirebaseUser) => {
       this.authState = authState;
 
       if (authState) {
@@ -60,7 +60,7 @@ export class UsersService implements CanActivate {
   login(): void {
     this.gaService.sendEvent('accounts', 'login');
     if (this.authState && this.authState.isAnonymous) {
-      this.fbAuth.auth.currentUser.linkWithRedirect(new firebase.auth.GoogleAuthProvider())
+      this.fbAuth.auth.currentUser.linkWithRedirect(new auth.GoogleAuthProvider())
       .catch((error: any) => {
         if (error.credential) {
           this.signInWithCredential(error.credential);
@@ -70,7 +70,7 @@ export class UsersService implements CanActivate {
         }
       });
     } else {
-      this.fbAuth.auth.signInWithRedirect(new firebase.auth.GoogleAuthProvider())
+      this.fbAuth.auth.signInWithRedirect(new auth.GoogleAuthProvider())
       .catch((error) => {
         console.error(`signInWithRedirect failed: ${JSON.stringify(error)}`);
         this.gaService.sendEvent('accounts', 'signInWithRedirect_failure');
@@ -95,7 +95,7 @@ export class UsersService implements CanActivate {
     });
   }
 
-  signInWithCredential(credential: firebase.auth.AuthCredential): void {
+  signInWithCredential(credential: auth.AuthCredential): void {
     this.fbAuth.auth.signInWithCredential(credential)
     .catch((signInError) => {
       console.error(`signInWithCredential failed: ${JSON.stringify(signInError)}`);
@@ -114,11 +114,11 @@ export class UsersService implements CanActivate {
     });
   }
 
-  private setCurrentLoggedInUser(authState: firebase.User) {
+  private setCurrentLoggedInUser(authState: FirebaseUser) {
     this.isLoggedIn = !!authState && !authState.isAnonymous;
     this.gaService.setUserId(authState.uid);
     this.fullStoryService.setUser(authState.uid,
-      authState.displayName || 'Anonymous', authState.email || 'anonymous@marketamplified.com');
+      authState.displayName || 'Anonymous', authState.email || 'anonymous@devintent.com');
 
     if (!authState.isAnonymous) {
       this.firebaseUser = this.db.object<User>('/users/' + authState.uid);
@@ -196,11 +196,7 @@ export class UsersService implements CanActivate {
     const isAdminObservable: Observable<any> = this.db.object('/admins/' + user.uid).valueChanges();
     this.adminSubscription = isAdminObservable.subscribe(
       data => {
-        if (data) {
-          this.isAdmin = true;
-        } else {
-          this.isAdmin = false;
-        }
+        this.isAdmin = !!data;
       },
       err => {
         console.error('Failed to read from ' + '/admins/' + user.uid + ': ' + err);
