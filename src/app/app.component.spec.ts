@@ -1,23 +1,28 @@
 /* tslint:disable:no-unused-variable */
-import {TestBed, async} from '@angular/core/testing';
+import {async, TestBed} from '@angular/core/testing';
 import {AppComponent} from './app.component';
 import {GlobalStylesComponent} from './shared/global-styles';
 import {TopNavComponent} from './top-nav/top-nav.component';
-import {
-  MatAutocompleteModule,
-  MatButtonModule, MatIconModule, MatInputModule, MatListModule, MatMenuModule, MatOptionModule, MatSidenavModule, MatToolbarModule
-} from '@angular/material';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import {MatButtonModule} from '@angular/material/button';
+import {MatOptionModule} from '@angular/material/core';
+import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
+import {MatListModule} from '@angular/material/list';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatToolbarModule} from '@angular/material/toolbar';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
-import {BreakPointRegistry, FlexLayoutModule, MediaService} from '@angular/flex-layout';
+import {BreakPointRegistry, FlexLayoutModule} from '@angular/flex-layout';
 import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
 import {RouterTestingModule} from '@angular/router/testing';
 import {NavService} from './nav.service';
 import {UsersService} from './users.service';
 import {FooterComponent} from './footer/footer.component';
 import {ReactiveFormsModule} from '@angular/forms';
-import {AngularFireDatabaseModule} from 'angularfire2/database';
-import {AngularFireModule} from 'angularfire2';
-import {AngularFireAuthModule} from 'angularfire2/auth';
+import {AngularFireDatabaseModule} from '@angular/fire/database';
+import {AngularFireModule} from '@angular/fire';
+import {AngularFireAuthModule} from '@angular/fire/auth';
 import {environment} from '../environments/environment';
 
 // TODO mock GoogleAnalyticsService
@@ -54,7 +59,6 @@ describe('AppComponent', () => {
       providers: [
         UsersService,
         NavService,
-        MediaService,
         BreakPointRegistry
       ]
     }).compileComponents();

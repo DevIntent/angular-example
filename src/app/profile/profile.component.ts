@@ -1,5 +1,5 @@
-import {Component, OnDestroy, ViewContainerRef, OnInit} from '@angular/core';
-import {MatSnackBar, MatSnackBarConfig} from '@angular/material';
+import {Component, OnDestroy, OnInit, ViewContainerRef} from '@angular/core';
+import {MatSnackBar, MatSnackBarConfig} from '@angular/material/snack-bar';
 import {UsersService} from '../users.service';
 import {Subscription} from 'rxjs/Subscription';
 import {NavService} from '../nav.service';

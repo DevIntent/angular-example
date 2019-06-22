@@ -13,7 +13,7 @@ import {filter} from 'rxjs/operators';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent implements OnInit, AfterViewInit {
-  @ViewChild('appDrawer') appDrawer: ElementRef;
+  @ViewChild('appDrawer', { static: true }) appDrawer: ElementRef;
   private firstUseOfCurrentRoute: boolean = true;
 
   constructor(public usersService: UsersService,

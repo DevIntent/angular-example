@@ -9,7 +9,7 @@ import {PropertyLocation} from '../models/property-location';
 })
 export class PropertyMapComponent implements AfterViewInit {
   @Input() location: PropertyLocation;
-  @ViewChild('map') map: AgmMap;
+  @ViewChild('map', { static: true }) map: AgmMap;
 
   constructor() {}
 

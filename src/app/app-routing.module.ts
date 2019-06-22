@@ -9,7 +9,7 @@ import {UsersService} from './users.service';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', component: LandingComponent, children: []},
-  {path: 'agents', loadChildren: './agents/agents.module#AgentsModule'},
+  {path: 'agents', loadChildren: () => import('./agents/agents.module').then(m => m.AgentsModule)},
   {path: 'profile/:id', component: ProfileComponent, canActivate: [UsersService], children: []},
   {path: 'terms', component: TermsComponent, children: []},
   {path: 'privacy', component: PrivacyComponent, children: []},

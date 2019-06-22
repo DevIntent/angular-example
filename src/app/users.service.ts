@@ -1,16 +1,16 @@
 import {Injectable} from '@angular/core';
 import {Subscription} from 'rxjs/Subscription';
-import {AngularFireDatabase, AngularFireObject} from 'angularfire2/database';
-import {AngularFireAuth} from 'angularfire2/auth';
+import {AngularFireDatabase, AngularFireObject} from '@angular/fire/database';
+import {AngularFireAuth} from '@angular/fire/auth';
 import * as firebase from 'firebase/app';
-import {CanActivate, RouterStateSnapshot, ActivatedRouteSnapshot} from '@angular/router';
+import {ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot} from '@angular/router';
 import {GoogleAnalyticsService} from './google-analytics.service';
 import {FullStoryService} from './fullstory.service';
 import {User} from './models/user';
 import {BehaviorSubject} from 'rxjs/BehaviorSubject';
 import {Observable} from 'rxjs/Observable';
 import {CodeConfirmationDialog} from './code-confirmation-dialog/code-confirmation.dialog';
-import {MatDialog} from '@angular/material';
+import {MatDialog} from '@angular/material/dialog';
 
 @Injectable()
 export class UsersService implements CanActivate {

@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpHeaders} from '@angular/common/http';
 import {Observer} from 'rxjs/Observer';
 import {Observable} from 'rxjs/Observable';
-import {AngularFireAuth} from 'angularfire2/auth';
+import {AngularFireAuth} from '@angular/fire/auth';
 import * as firebase from 'firebase/app';
 
 @Injectable()

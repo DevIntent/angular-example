@@ -23,9 +23,7 @@
           "/index.html",
           "/robots.txt",
           "/sitemap.xml",
-          "!/ngsw-worker.js"
-        ],
-        "versionedFiles": [
+          "!/ngsw-worker.js",
           "/*.bundle.css",
           "/*.bundle.js",
           "/*.chunk.js"

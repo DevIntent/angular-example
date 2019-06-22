@@ -6,7 +6,7 @@ import {SharedModule} from '../shared';
 import {AgmCoreModule} from '@agm/core';
 import {environment} from '../../environments/environment';
 import {PropertyMapComponent} from '../property-map/property-map.component';
-import {MatExpansionModule} from '@angular/material';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   imports: [
