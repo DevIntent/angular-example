@@ -79,7 +79,7 @@
     "karma-jasmine": "1.1.1",
     "karma-jasmine-html-reporter": "0.2.2",
     "karma-scss-preprocessor": "3.0.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "npm-check": "5.9.0",
     "protractor": "5.4.2",
     "source-map-explorer": "2.0.1",
